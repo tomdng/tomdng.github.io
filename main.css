@@ -106,6 +106,10 @@ header h3 {
     margin: 5% 0% 5% 0%;
 }
 
+#main-desc-text-only {
+    margin: 0 0 5% 0;
+}
+
 .text-paragraph {
     line-height: 150%;
 }
@@ -131,7 +135,7 @@ header h3 {
 }
 
 .margin-section {
-    padding:  0 20%;
+    padding: 80px 0 0 0;
 }
 
 .navbar-fixed {
@@ -141,6 +145,3 @@ header h3 {
     z-index: 1;
 }
 
-.text-first {
-    margin-top: 10%;
-}
