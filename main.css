@@ -86,7 +86,7 @@ header h3 {
 }
 
 .row-margin {
-    margin: 2% 5% 0% 5%;
+    margin: 2% 15% 0% 15%;
 }
 
 #view-button {
@@ -103,7 +103,7 @@ header h3 {
 }
 
 #main-desc {
-    margin: 5% 0% 5% 0%;
+    margin: 5% 15% 5% 15%;
 }
 
 #main-desc-text-only {
@@ -145,3 +145,12 @@ header h3 {
     z-index: 1;
 }
 
+#image-display {
+    display: flex;
+    width: 100%;
+    margin: 1% 0 0 0;
+}
+
+.text-side-margin {
+    margin: 0 8% 0 8%;
+}
