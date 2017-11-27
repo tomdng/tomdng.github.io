@@ -154,3 +154,16 @@ header h3 {
 .text-side-margin {
     margin: 0 8% 0 8%;
 }
+
+.blog-post {
+    align-content: center;
+    justify-content: center;
+}
+
+.blog-post h3 {
+    margin-top: 15%;
+}
+
+.img-in-between {
+    margin: 40px 0 40px 0;
+}
