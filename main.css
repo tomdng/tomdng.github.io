@@ -53,7 +53,7 @@ header h3 {
     display: flex;
     align-items: center;
     background: rgb(200, 54, 54);
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://f001.backblazeb2.com/file/TranslucentLeaf-Website/3dwork/moneytree/Promo+Shot.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://f001.backblazeb2.com/file/TranslucentLeaf-Website/3dwork/lowpolytesla/Driving.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -122,6 +122,16 @@ header h3 {
     display: flex;
     align-items: center;
     background: url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: whitesmoke;
+    height: 600px;
+}
+#about-image {
+        display: flex;
+    align-items: center;
+    background: url('https://f001.backblazeb2.com/file/TranslucentLeaf-Website/3dwork/lowpolytesla/Bridge.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
