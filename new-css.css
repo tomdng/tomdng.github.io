@@ -1,0 +1,87 @@
+/*Main structure of website uses CSS grid. */
+body {
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    margin: 0;
+}
+
+/* Removes bolding on the heading elements. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* Disable colored and underlined anchors by default unless intentionally underlined. */
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CSS for the navigation bar that's located on the top of every webpage. */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    padding: 0;
+    margin: 0%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav,
+a {
+    margin: 0 5%;
+}
+
+/*CSS for content area of webpage. */
+main {
+    grid-area: main;
+    border: solid red;
+}
+
+/*Big front page banner iamge for the photo page. */
+.banner-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        background: url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 80vh;
+    font-size: 2rem;
+}
+
+/* Gallery is a CSS grid where images occupy it in rows of 3*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    border: solid;
+    grid-gap: 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 15%;
+}
+
+.gallery img {
+    width: 100%;
+    border: solid red;
+} 
