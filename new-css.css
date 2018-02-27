@@ -10,7 +10,6 @@ body {
 }
 
 /* Removes bolding on the heading elements. */
-
 h1,
 h2,
 h3,
@@ -21,7 +20,6 @@ h6 {
 }
 
 /* Disable colored and underlined anchors by default unless intentionally underlined. */
-
 a,
 a:visited,
 a:hover,
@@ -31,7 +29,6 @@ a:active {
 }
 
 /* CSS for the navigation bar that's located on the top of every webpage. */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -53,7 +50,6 @@ a {
 /*CSS for content area of webpage. */
 main {
     grid-area: main;
-    border: solid red;
 }
 
 /*Big front page banner iamge for the photo page. */
@@ -73,15 +69,45 @@ main {
 /* Gallery is a CSS grid where images occupy it in rows of 3*/
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);;
-    border: solid;
-    grid-gap: 10%;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vh;
+    grid-row-gap: 5vh;
     margin: 5% 15%;
 }
 
 .gallery img {
     width: 100%;
-    border: solid red;
 } 
+
+/*Medium width gallery (2 items) */
+@media (max-width: 1024px) {
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vh;
+    grid-row-gap: 5vh;
+    margin: 5% 15%;
+}
+}
+
+
+/*Footer CSS */
+
+footer {
+    display: flex;
+    grid-area: footer;
+    justify-content: space-between;
+}
+
+/*Mobile layout*/
+
+@media (max-width: 640px) {
+    /* There's a column of one-image only for the gallery*/
+    .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5vh;
+    grid-row-gap: 5vh;
+    margin: 5% 15%;
+}
+}
