@@ -1,4 +1,5 @@
 /*Main structure of website uses CSS grid. */
+
 body {
     display: grid;
     font-family: 'Open Sans', sans-serif;
@@ -10,6 +11,7 @@ body {
 }
 
 /* Removes bolding on the heading elements. */
+
 h1,
 h2,
 h3,
@@ -19,7 +21,12 @@ h6 {
     font-weight: normal;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* Disable colored and underlined anchors by default unless intentionally underlined. */
+
 a,
 a:visited,
 a:hover,
@@ -28,7 +35,12 @@ a:active {
     text-decoration: none;
 }
 
+a:hover {
+    color: rgb(158, 158, 158);
+}
+
 /* CSS for the navigation bar that's located on the top of every webpage. */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -37,39 +49,50 @@ header {
     margin: 0%;
 }
 
+/*Menu button for mobile screens*/
+
+#menu {
+    display: none;
+}
+
+/*Positions navigation links and adds space between each link*/
+
 nav {
     display: flex;
     justify-content: flex-end;
 }
 
-nav,
-a {
+header a, footer a {
     margin: 0 5%;
 }
 
 /*CSS for content area of webpage. */
+
 main {
     grid-area: main;
 }
 
 /*Big front page banner iamge for the photo page. */
+
 .banner-photo {
     display: flex;
     align-items: center;
     justify-content: center;
-        background: url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
+    background: url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
-    height: 80vh;
+    height: 100vh;
     font-size: 2rem;
 }
 
 /* Gallery is a CSS grid where images occupy it in rows of 3*/
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax (1px, 1fr) minmax (1px, 1fr);
     grid-gap: 5vh;
     grid-row-gap: 5vh;
     margin: 5% 15%;
@@ -77,19 +100,19 @@ main {
 
 .gallery img {
     width: 100%;
-} 
+}
 
 /*Medium width gallery (2 items) */
+
 @media (max-width: 1024px) {
     .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5vh;
-    grid-row-gap: 5vh;
-    margin: 5% 15%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5vh;
+        grid-row-gap: 5vh;
+        margin: 5% 15%;
+    }
 }
-}
-
 
 /*Footer CSS */
 
@@ -103,11 +126,57 @@ footer {
 
 @media (max-width: 640px) {
     /* There's a column of one-image only for the gallery*/
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax (1px, 1fr);
+        margin: 0;
+        overflow-x: hidden;
+        font-size: 1.5rem;
+    }
+
     .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5vh;
-    grid-row-gap: 5vh;
-    margin: 5% 15%;
-}
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5vh;
+        grid-row-gap: 5vh;
+        margin: 5% 15%;
+    }
+
+    nav {
+        display: block;
+        width: 50vw;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    nav a,
+    nav:active a {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5%;
+    }
+
+
+    nav:hover a {
+        visibility: visible;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    footer {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        /*background: #FFA232; <Orange color for more flair*/
+        background: #f9f9f9;
+    }
+    
+    footer a{
+        margin: 5vh 0;
+    }
 }
