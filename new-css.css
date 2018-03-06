@@ -62,8 +62,9 @@ nav {
     justify-content: flex-end;
 }
 
-header a, footer a {
-    margin: 0 5%;
+header a,
+footer a {
+    margin: 0 2vw;
 }
 
 /*CSS for content area of webpage. */
@@ -72,19 +73,56 @@ main {
     grid-area: main;
 }
 
-/*Big front page banner iamge for the photo page. */
+/*Index page banner image*/
 
-.banner-photo {
+.banner-index {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/index-banner.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
     height: 100vh;
     font-size: 2rem;
+}
+
+/*3D art page banner image*/
+
+.banner-3d-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/3d-page-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+}
+
+/*Big front page banner iamge for the photo page. */
+
+.banner-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)), url('https://farm5.staticflickr.com/4241/35492679512_423813aa3e_k.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+}
+
+.banner-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.25vw;
 }
 
 /* Gallery is a CSS grid where images occupy it in rows of 3*/
@@ -95,16 +133,21 @@ main {
     grid-template-rows: minmax (1px, 1fr) minmax (1px, 1fr);
     grid-gap: 5vh;
     grid-row-gap: 5vh;
-    margin: 5% 15%;
+    margin: 5% 19%;
 }
 
 .gallery img {
     width: 100%;
+    vertical-align: middle;
+}
+
+.page-intro {
+    margin: 5% 19%;
 }
 
 /*Medium width gallery (2 items) */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -124,7 +167,7 @@ footer {
 
 /*Mobile layout*/
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     /* There's a column of one-image only for the gallery*/
     body {
         display: grid;
@@ -167,7 +210,7 @@ footer {
         display: flex;
         justify-content: flex-end;
     }
-    
+
     footer {
         display: block;
         justify-content: center;
@@ -175,8 +218,8 @@ footer {
         /*background: #FFA232; <Orange color for more flair*/
         background: #f9f9f9;
     }
-    
-    footer a{
+
+    footer a {
         margin: 5vh 0;
     }
 }
