@@ -229,7 +229,8 @@ p {
 }
 
 .blog-post-preview img {
-	height: 35vh;
+/* Use 35vh as an alternate, experimental height, but that creates vertically orientated rectangles but don't look very bice.*/
+	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
