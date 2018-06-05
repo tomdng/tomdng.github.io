@@ -11,4 +11,5 @@ March 2018
 [x] Figure out proper media cutoffs  (3/18)
 [ ] Update favicon  
 [ ] Fill out missing content for new pages  
-[] Link all 3D artworks
+[ ] Link all 3D artworks
+[ ] Rework the blog preview thumbnails

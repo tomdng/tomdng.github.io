@@ -230,7 +230,7 @@ p {
 
 .blog-post-preview img {
 /* Use 35vh as an alternate, experimental height, but that creates vertically orientated rectangles but don't look very bice.*/
-	height: 100%;
+	height: 50%;
 	object-fit: cover;
 	object-position: center;
 }
@@ -245,6 +245,12 @@ p {
 		grid-row-gap: 5vh;
 		margin: 5% 15%;
 	}
+}
+
+/* Image styles*/
+
+.big-width-img {
+    width: 100%;
 }
 
 /*Footer CSS */
