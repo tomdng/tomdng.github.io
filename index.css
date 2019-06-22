@@ -10,7 +10,7 @@ body {
 	margin: 0;
 }
 
-/* Removes bolding on the heading elements. */
+/* Resets bolding on the heading elements. */
 
 h1,
 h2,
@@ -45,6 +45,10 @@ header {
 	margin: 0%;
 }
 
+header h3 {
+	font-weight: 600;
+}
+
 /*Menu button for mobile screens*/
 
 #menu {
@@ -69,21 +73,51 @@ main {
 	grid-area: main;
 }
 
-/*Index page banner image*/
+/*Home page banner image*/
 
-.banner-index {
+.banner-home {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/index-banner.jpg');
+	justify-content: baseline;
+	background: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 70vh;
+	color: black;
+	height: 100vh;
 	font-size: 2rem;
+}
+
+/* Horizontal text for home page */
+
+.intro-text {
+	margin: 35vh 0 -2vh 0;
+}
+
+.intro-description {
+	font-size: 1.5rem;
+}
+
+.skills-text-display {
+	display: flex;
+	flex-direction: row;
+	font-weight: 600;
+	justify-content: center;
+	margin: 2vh 0 0 0;
+	width: 50vw;
+}
+
+.skills-text-display p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 8rem;
+}
+
+.skills-text-display p:hover {
+	font-size: 2rem !important;
+	margin: 0;
 }
 
 /*3D art page banner image*/
@@ -128,23 +162,22 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 50vh;
+	height: 100vh;
 }
 
-/*Banner for blog page*/
+/*Banner for projects page*/
 
-.banner-blog {
+.banner-projects {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/blog-page-banner.jpg');
+	background-color: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 100vh;
+	color: black;
+	height: 92vh;
 }
 
 /*Banner for about page*/
@@ -159,8 +192,10 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 50vh;
+	height: 100vh;
 }
+
+/* General banner styles */
 
 .banner-text {
 	font-size: 2.5rem;
@@ -200,6 +235,7 @@ main {
 }
 
 .gallery img {
+	border-radius: 0.5rem;
 	width: 100%;
 	vertical-align: middle;
 }
@@ -261,6 +297,10 @@ footer {
 	justify-content: space-between;
 }
 
+footer h3 {
+	font-weight: 600;
+}
+
 /*Mobile layout*/
 
 @media (max-width: 900px) {
@@ -272,6 +312,36 @@ footer {
 		margin: 0;
 		overflow-x: hidden;
 		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	/* Homepage styling */
+
+	.intro-text {
+		margin: 10vh 0 -2vh 0;
+		width: 15rem;
+	}
+
+	.skills-text-display {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.skills-text-display p{
+		border: solid black;
+		margin: 1vh 1vh 1vh 0;
+		height: 2.5rem;
+		width: 12rem;
+	}
+
+	.skills-text-display p:hover {
+		font-size: 2rem !important;
+		height: 3rem;
+		width: 14rem;
 	}
 
 	.gallery {
@@ -321,7 +391,7 @@ footer {
 		justify-content: center;
 		text-align: center;
 		/*background: #FFA232; <Orange color for more flair*/
-		background: #f9f9f9;
+		background: white;
 	}
 
 	footer a {
