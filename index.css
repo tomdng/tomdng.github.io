@@ -49,12 +49,6 @@ header h3 {
 	font-weight: 600;
 }
 
-/*Menu button for mobile screens*/
-
-#menu {
-	display: none;
-}
-
 /*Positions navigation links and adds space between each link*/
 
 nav {
@@ -132,7 +126,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 94vh;
 }
 
 /*Big front page banner iamge for the photo page. */
@@ -147,7 +141,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 94vh;
 }
 
 /*Big front page banner for video page*/
@@ -162,7 +156,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 94vh;
 }
 
 /*Banner for projects page*/
@@ -177,7 +171,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: black;
-	height: 92vh;
+	height: 93vh;
 }
 
 /*Banner for about page*/
@@ -192,7 +186,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 30vh;
 }
 
 /* General banner styles */
@@ -241,7 +235,8 @@ main {
 }
 
 .page-intro {
-	margin: 5% 19%;
+	margin: 5vh auto 1vh auto;
+	max-width: 800px;
 }
 
 /* Text styles*/
@@ -258,35 +253,40 @@ p {
 	font-size: 1.2rem;
 }
 
-/*Previews for blog posts on the blog page*/
-
-.blog-post-preview {
-	overflow: hidden;
-}
-
-.blog-post-preview img {
-/* Use 35vh as an alternate, experimental height, but that creates vertically orientated rectangles but don't look very bice.*/
-	height: 50%;
-	object-fit: cover;
-	object-position: center;
-}
-
-/*Medium width gallery (2 items) */
-
-@media (max-width: 1200px) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 5vh;
-		grid-row-gap: 5vh;
-		margin: 5% 15%;
-	}
-}
-
 /* Image styles*/
 
 .big-width-img {
     width: 100%;
+}
+
+/* Projects page CSS */
+.project-list {
+	margin: 20vh auto 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: baseline;
+	max-width: 800px;
+	min-height: 72vh;
+}
+
+.project-title {
+	font-size: 2.5rem;
+	margin: 0 0 0 0;
+}
+
+.project-element {
+	margin: 2vh 0 2vh 0;
+}
+
+.project-element img {
+	border-radius: 0.5rem;
+	max-width: 800px;
+}
+
+.project-attribute {
+	margin: 0;
 }
 
 /*Footer CSS */
@@ -301,7 +301,24 @@ footer h3 {
 	font-weight: 600;
 }
 
+/*Medium width gallery (2 items). Tablet style viewß*/
+
+@media (max-width: 1200px) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5vh;
+		grid-row-gap: 5vh;
+		margin: 5% 15%;
+	}
+}
+
 /*Mobile layout*/
+/*Menu button for mobile screens*/
+
+#menu {
+	display: none;
+}
 
 @media (max-width: 900px) {
 	/* There's a column of one-image only for the gallery*/
