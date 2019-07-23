@@ -83,7 +83,7 @@ main {
 	font-size: 2rem;
 }
 
-/* Horizontal text for home page */
+/* Text styling for home page */
 
 .intro-text {
 	margin: 35vh 0 -2vh 0;
@@ -174,19 +174,29 @@ main {
 	height: 93vh;
 }
 
-/*Banner for about page*/
+/*Banner for about page */
 
 .banner-about {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/about-banner.jpg');
+	justify-content: baseline;
+	background: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 30vh;
+	color: black;
+	height: 100vh;
+	font-size: 2rem;
+}
+
+/* Text styling for home page */
+.about-title {
+	margin: 10vh 0 0 0;
+}
+
+.about-text {
+	max-width: 50vw;
 }
 
 /* General banner styles */
