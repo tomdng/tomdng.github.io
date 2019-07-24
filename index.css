@@ -10,7 +10,7 @@ body {
 	margin: 0;
 }
 
-/* Removes bolding on the heading elements. */
+/* Resets bolding on the heading elements. */
 
 h1,
 h2,
@@ -45,10 +45,8 @@ header {
 	margin: 0%;
 }
 
-/*Menu button for mobile screens*/
-
-#menu {
-	display: none;
+header h3 {
+	font-weight: 600;
 }
 
 /*Positions navigation links and adds space between each link*/
@@ -69,21 +67,51 @@ main {
 	grid-area: main;
 }
 
-/*Index page banner image*/
+/*Home page banner image*/
 
-.banner-index {
+.banner-home {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/index-banner.jpg');
+	justify-content: baseline;
+	background: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 70vh;
+	color: black;
+	height: 100vh;
 	font-size: 2rem;
+}
+
+/* Text styling for home page */
+
+.intro-text {
+	margin: 35vh 0 -2vh 0;
+}
+
+.intro-description {
+	font-size: 1.5rem;
+}
+
+.skills-text-display {
+	display: flex;
+	flex-direction: row;
+	font-weight: 600;
+	justify-content: center;
+	margin: 2vh 0 0 0;
+	width: 50vw;
+}
+
+.skills-text-display p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 8rem;
+}
+
+.skills-text-display p:hover {
+	font-size: 2rem !important;
+	margin: 0;
 }
 
 /*3D art page banner image*/
@@ -98,7 +126,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 94vh;
 }
 
 /*Big front page banner iamge for the photo page. */
@@ -113,7 +141,7 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 100vh;
+	height: 94vh;
 }
 
 /*Big front page banner for video page*/
@@ -128,39 +156,50 @@ main {
 	background-position: center;
 	background-attachment: fixed;
 	color: white;
-	height: 50vh;
+	height: 94vh;
 }
 
-/*Banner for blog page*/
+/*Banner for projects page*/
 
-.banner-blog {
+.banner-projects {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/blog-page-banner.jpg');
+	background-color: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 100vh;
+	color: black;
+	height: 93vh;
 }
 
-/*Banner for about page*/
+/*Banner for about page */
 
 .banner-about {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	background: linear-gradient( rgba(0, 0, 0, 0.1),
-	rgba(0, 0, 0, 0.1)), url('images/full-sized/banner-photos/about-banner.jpg');
+	justify-content: baseline;
+	background: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: white;
-	height: 50vh;
+	color: black;
+	height: 100vh;
+	font-size: 2rem;
 }
+
+/* Text styling for home page */
+.about-title {
+	margin: 10vh 0 0 0;
+}
+
+.about-text {
+	max-width: 50vw;
+}
+
+/* General banner styles */
 
 .banner-text {
 	font-size: 2.5rem;
@@ -200,12 +239,14 @@ main {
 }
 
 .gallery img {
+	border-radius: 0.5rem;
 	width: 100%;
 	vertical-align: middle;
 }
 
 .page-intro {
-	margin: 5% 19%;
+	margin: 5vh auto 1vh auto;
+	max-width: 800px;
 }
 
 /* Text styles*/
@@ -222,35 +263,40 @@ p {
 	font-size: 1.2rem;
 }
 
-/*Previews for blog posts on the blog page*/
-
-.blog-post-preview {
-	overflow: hidden;
-}
-
-.blog-post-preview img {
-/* Use 35vh as an alternate, experimental height, but that creates vertically orientated rectangles but don't look very bice.*/
-	height: 50%;
-	object-fit: cover;
-	object-position: center;
-}
-
-/*Medium width gallery (2 items) */
-
-@media (max-width: 1200px) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 5vh;
-		grid-row-gap: 5vh;
-		margin: 5% 15%;
-	}
-}
-
 /* Image styles*/
 
 .big-width-img {
     width: 100%;
+}
+
+/* Projects page CSS */
+.project-list {
+	margin: 20vh auto 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: baseline;
+	max-width: 800px;
+	min-height: 72vh;
+}
+
+.project-title {
+	font-size: 2.5rem;
+	margin: 0 0 0 0;
+}
+
+.project-element {
+	margin: 2vh 0 2vh 0;
+}
+
+.project-element img {
+	border-radius: 0.5rem;
+	max-width: 800px;
+}
+
+.project-attribute {
+	margin: 0;
 }
 
 /*Footer CSS */
@@ -261,10 +307,78 @@ footer {
 	justify-content: space-between;
 }
 
-/*Mobile layout*/
+footer h3 {
+	font-weight: 600;
+}
 
-@media (max-width: 900px) {
-	/* There's a column of one-image only for the gallery*/
+/*Medium width gallery (2 items). Tablet style viewß*/
+
+@media (max-width: 1200px) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5vh;
+		grid-row-gap: 5vh;
+		margin: 5% 15%;
+	}
+
+	.banner-about {
+		height: 100vh;
+	}
+
+	/* Homepage styling for tablet/mobile */
+	.banner-home {
+		height: 100vh;
+	}
+
+	.banner-home p {
+		font-size: 1.7rem;
+	}
+
+	.intro-text {
+		margin: auto 0 0 0;
+		width: 15rem;
+	}
+
+	.skills-text-display {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		font-weight: 600;
+		margin: 0 0 auto 0;
+	}
+
+	.skills-text-display p{
+		border: solid black;
+		border-radius: 2rem;
+		margin: 1vh 1vh 1vh 0;
+		height: 2.5rem;
+		width: 12rem;
+	}
+
+	/* Projects page styling */
+	.project-list {
+		min-height: 100vh;
+		max-width: 60vw;
+		margin: 10vh auto 0 auto;
+	}
+
+	/* About page styling */
+	.banner-about p {
+		max-width: 60vw;
+	}
+}
+
+/*Mobile layout*/
+/*Menu button for mobile screens*/
+
+#menu {
+	display: none;
+}
+
+@media (max-width: 700px) {
 	body {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -272,8 +386,10 @@ footer {
 		margin: 0;
 		overflow-x: hidden;
 		font-size: 1.5rem;
+		text-align: center;
 	}
 
+	/* There's a column of one-image only for the gallery on mobile */
 	.gallery {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -282,21 +398,16 @@ footer {
 		margin: 5% 15%;
 		font-size: 1.5rem;
 	}
-
-	.banner-button {
-		padding: 1% 4%;
-	}
-
-	p {
-		font-size: 1.7rem;
-	}
 	
-	/*Code below is responsible for drawer-style nagivation*/
+	/* Code below is responsible for drawer-style nagivation and navbar look*/
+	header a {
+		font-size: 1.5rem;
+	}
+
 	nav {
 		display: block;
-		width: 50vw;
 		justify-content: flex-end;
-		text-align: right;
+		width: 50vw;
 	}
 
 	nav a,
@@ -316,15 +427,77 @@ footer {
 		justify-content: flex-end;
 	}
 
+	/* Mobile CSS for footer */
 	footer {
 		display: block;
 		justify-content: center;
 		text-align: center;
 		/*background: #FFA232; <Orange color for more flair*/
-		background: #f9f9f9;
+		background: white;
 	}
 
 	footer a {
 		margin: 5vh 0;
+		font-size: 1.5rem;
+	}
+
+	/* Homepage styling for mobile */
+	.banner-home {
+		height: 100vh;
+	}
+
+	.banner-home p {
+		font-size: 1.7rem;
+	}
+
+	.intro-text {
+		margin: auto 0 0 0;
+		width: 15rem;
+	}
+
+	.skills-text-display {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		font-weight: 600;
+		margin: 0 0 auto 0;
+	}
+
+	.skills-text-display p{
+		border: solid black;
+		border-radius: 2rem;
+		margin: 1vh 1vh 1vh 0;
+		height: 2.5rem;
+		width: 12rem;
+	}
+
+	/* TODO: Consider removing as mobile users don't hover... */
+	.skills-text-display p:hover {
+		font-size: 2rem !important;
+		height: 3rem;
+		width: 14rem;
+	}
+
+	/* About page styling */
+	.about-title {
+		font-size: 1.5rem;
+		margin: auto 0 0 0;
+	}
+
+	.banner-about {
+		height: auto;
+	}
+
+	.banner-about p {
+		font-size: 1rem;
+		max-width: 80vw;
+	}
+
+	/* Projects page styling */
+	.project-list {
+		max-width: 80vw;
+		margin: auto;
 	}
 }
