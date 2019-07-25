@@ -323,7 +323,7 @@ footer h3 {
 	}
 
 	.banner-about {
-		height: 100vh;
+		height: 95vh;
 	}
 
 	/* Homepage styling for tablet/mobile */
@@ -483,11 +483,11 @@ footer h3 {
 	/* About page styling */
 	.about-title {
 		font-size: 1.5rem;
-		margin: auto 0 0 0;
+		margin: 0 0 0 0;
 	}
 
 	.banner-about {
-		height: auto;
+		height: 90vh;
 	}
 
 	.banner-about p {
